@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/samuel-constantino/vovo-zap/issues"
   },
-  "homepage": "https://github.com/samuel-constantino/vovo-zap#readme"
+  "homepage": "https://github.com/samuel-constantino/vovo-zap#readme",
+  "dependencies": {
+    "@open-wa/wa-automate": "^4.23.7",
+    "jimp": "^0.16.1",
+    "nodemon": "^2.0.14"
+  }
 }
