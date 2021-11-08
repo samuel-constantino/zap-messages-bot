@@ -43,8 +43,6 @@ const execute = async () => {
         contacts.forEach(c => {
             client.sendFile(c.id, image, 'bom dia.jpg', `${text} - ${philosopher}`);
         });
-
-        console.log(`Enviando arquivo`);
     } catch (e) {
         console.log(e.message);
     }
