@@ -40,9 +40,12 @@ const sendMessage = async () => {
             const { text, philosopher } = await getText(); // get a random text and 
 
             const contacts = (await client.getAllContacts())
+                // .filter(c => c.id === '558881588013@c.us'); // filters contacts
                 .filter(c => c.id === GROUP_LEMBRETES_ID); // filters contacts
 
+            console.log(`Enviando mensagem para:`);
             contacts.forEach(c => {
+                console.log(c);
                 client.sendFile(c.id, image, 'image.jpg', `${text} - ${philosopher}`);
             });
         });
