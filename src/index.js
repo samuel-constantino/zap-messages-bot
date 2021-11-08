@@ -1,6 +1,6 @@
 const wa = require('@open-wa/wa-automate'); /* https://docs.openwa.dev/classes/api_Client.Client.html */
 const jimp = require('jimp'); /* https://www.npmjs.com/package/jimp */
-const pensadorAPI = require('pensador-api') /* https://github.com/operfildoluiz/pensador-api */
+const philosopherApi = require('pensador-api') /* https://github.com/operfildoluiz/pensador-api */
 
 const authors = require('./authors.json');
 
@@ -21,27 +21,27 @@ const getRandomNumber = (limit) => {
 };
 
 const getText = async () => {
-    const pensador = authors[getRandomNumber(authors)];
-    const { phrases } = await pensadorAPI({term: pensador, max: 10});
+    const philosopher = authors[getRandomNumber(authors)];
+    const { phrases } = await philosopherApi({term: philosopher, max: 10});
     const { text } = phrases[getRandomNumber(phrases)];
 
-    return { text, pensador };
+    return { text, philosopher };
 };
 
 const execute = async () => {
     try {
 
-        const client = await wa.create();
+        const client = await wa.create(); // Create WA client
 
-        const image = await getRandomImage();
+        const image = await getRandomImage(); // Get image and convert to base64
 
-        const { text, pensador } = await getText();
+        const { text, philosopher } = await getText(); // get a random text and 
 
         const contacts = (await client.getAllContacts())
-            .filter(c => c.id === GROUP_LEMBRETES_ID);
+            .filter(c => c.id === GROUP_LEMBRETES_ID); // filters contacts
 
         contacts.forEach(c => {
-            client.sendFile(c.id, image, 'bom dia.jpg', `${text} - ${pensador}`);
+            client.sendFile(c.id, image, 'bom dia.jpg', `${text} - ${philosopher}`);
         });
 
         console.log(`Enviando arquivo`);
