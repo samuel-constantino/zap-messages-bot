@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -25,10 +24,9 @@
   "homepage": "https://github.com/samuel-constantino/vovo-zap#readme",
   "dependencies": {
     "@open-wa/wa-automate": "^4.23.7",
-    "dotenv": "^10.0.0",
     "jimp": "^0.16.1",
     "node-schedule": "^2.0.0",
-    "nodemon": "^2.0.14",
-    "pensador-api": "^1.0.0"
+    "pensador-api": "^1.0.0",
+    "readline-sync": "^1.4.10"
   }
 }
