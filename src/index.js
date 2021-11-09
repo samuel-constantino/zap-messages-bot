@@ -23,7 +23,7 @@ const getContacts = () => {
             continue;
         };
 
-        contacts.push(answer);
+        contacts.push(answer+'@c.us');
 
         console.log(`${answer} adicionado`);
     }
@@ -57,7 +57,10 @@ const main = () => {
 
     const cronExpression = getCronExpression();
     
-    sendMessage(contacts, cronExpression);
+    if (contacts.length) {
+        sendMessage(contacts, cronExpression);
+    } else {
+        console.log('Lista de contatos vazia.');
+    }
 }
-// main();
-sendMessage([558881588013], '0 0/1 * * * *');
+main();
