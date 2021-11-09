@@ -25,7 +25,9 @@
   "homepage": "https://github.com/samuel-constantino/vovo-zap#readme",
   "dependencies": {
     "@open-wa/wa-automate": "^4.23.7",
+    "dotenv": "^10.0.0",
     "jimp": "^0.16.1",
+    "node-schedule": "^2.0.0",
     "nodemon": "^2.0.14",
     "pensador-api": "^1.0.0"
   }

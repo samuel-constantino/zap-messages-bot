@@ -1,51 +1,35 @@
 const wa = require('@open-wa/wa-automate'); /* https://docs.openwa.dev/classes/api_Client.Client.html */
-const jimp = require('jimp'); /* https://www.npmjs.com/package/jimp */
-const philosopherApi = require('pensador-api') /* https://github.com/operfildoluiz/pensador-api */
+const nodeSchedule = require('node-schedule'); /* https://www.npmjs.com/package/node-schedule */
 
-const authors = require('./authors.json');
+const { getRandomImage, getRandomText } = require('./randomData');
 
-const GROUP_LEMBRETES_ID = '558881858742-1632265868@g.us';
+require('dotenv').config(); /* https://www.npmjs.com/package/dotenv */
 
-const getRandomImage = async () => {
-    const URL_RANDOM_IMAGE = 'https://picsum.photos/400/400';
+const GROUP_LEMBRETES_ID = process.env.GROUP_LEMBRETES_ID;
 
-    const dataImage = await jimp.read(URL_RANDOM_IMAGE);
-
-    const image = await dataImage.getBase64Async(jimp.MIME_JPEG);
-
-    return image;
-};
-
-const getRandomNumber = (limit) => {
-    return parseInt(Math.random() * limit.length);
-};
-
-const getText = async () => {
-    const philosopher = authors[getRandomNumber(authors)];
-    const { phrases } = await philosopherApi({term: philosopher, max: 10});
-    const { text } = phrases[getRandomNumber(phrases)];
-
-    return { text, philosopher };
-};
-
-const execute = async () => {
+const sendMessage = async () => {
     try {
-
         const client = await wa.create(); // Create WA client
 
-        const image = await getRandomImage(); // Get image and convert to base64
+        nodeSchedule.scheduleJob('0 0/1 * * * *', async () => {
 
-        const { text, philosopher } = await getText(); // get a random text and 
+            const image = await getRandomImage(); // Get image and convert to base64
 
-        const contacts = (await client.getAllContacts())
-            .filter(c => c.id === GROUP_LEMBRETES_ID); // filters contacts
+            const { text, philosopher } = await getRandomText(); // get a random text and your author (philosopher)
 
-        contacts.forEach(c => {
-            client.sendFile(c.id, image, 'bom dia.jpg', `${text} - ${philosopher}`);
+            const contacts = (await client.getAllContacts())
+                .filter(c => c.id === GROUP_LEMBRETES_ID); // filters contacts
+            
+            console.log(`Enviando para:`);
+            contacts.forEach(c => console.log(`${c.name}`));
+
+            contacts.forEach(c => {
+                client.sendFile(c.id, image, 'image.jpg', `${text} - ${philosopher}`);
+            });
         });
     } catch (e) {
         console.log(e.message);
     }
 };
 
-execute();
+sendMessage();
