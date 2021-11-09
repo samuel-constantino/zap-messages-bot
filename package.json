@@ -12,9 +12,11 @@
     "url": "git+https://github.com/samuel-constantino/vovo-zap.git"
   },
   "keywords": [
-    "[bot",
+    "bot",
     "messages",
-    "whatsapp]"
+    "whatsapp",
+    "node-schedule",
+    "cron expression"
   ],
   "author": "\"Samuel Constantino <samuelicapuidados@gmail.com>",
   "license": "ISC",
