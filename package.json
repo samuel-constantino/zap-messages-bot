@@ -1,6 +1,6 @@
 {
-  "name": "zap-bot",
-  "version": "1.0.0",
+  "name": "zap-messages-bot",
+  "version": "1.0.1",
   "description": "Aplicação NodeJS para envios automáticos de mensagens no WhatsApp",
   "main": "index.js",
   "scripts": {
@@ -32,6 +32,6 @@
     "readline-sync": "^1.4.10"
   },
   "bin": {
-        "zap-bot": "index.js"
+        "zap-messages-bot": "src/index.js"
   }
 }
