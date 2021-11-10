@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const readlineSync = require('readline-sync');
 
 const sendMessage = require('./sendMessage');

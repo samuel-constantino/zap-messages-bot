@@ -30,5 +30,8 @@
     "node-schedule": "^2.0.0",
     "pensador-api": "^1.0.0",
     "readline-sync": "^1.4.10"
+  },
+  "bin": {
+        "zap-bot": "index.js",
   }
 }
