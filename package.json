@@ -32,6 +32,6 @@
     "readline-sync": "^1.4.10"
   },
   "bin": {
-        "zap-bot": "index.js",
+        "zap-bot": "index.js"
   }
 }
