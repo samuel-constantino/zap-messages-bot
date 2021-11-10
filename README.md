@@ -1,6 +1,8 @@
-<h1 align="center">Welcome to zap-bot 👋</h1>
+<h1 align="center">Welcome to zap-messages-bot 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://www.npmjs.com/package/zap-messages-bot" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/zap-messages-bot.svg">
+  </a>
   <a href="https://github.com/samuel-constantino/vovo-zap#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -8,7 +10,7 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
   <a href="https://github.com/samuel-constantino/vovo-zap/blob/master/LICENSE" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/github/license/samuel-constantino/zap-bot" />
+    <img alt="License: ISC" src="https://img.shields.io/github/license/samuel-constantino/zap-messages-bot" />
   </a>
 </p>
 
@@ -25,7 +27,7 @@ npm install
 ## Usage
 
 ```sh
-npm start
+npx zap-messages-bot
 ```
 
 ## Run tests
@@ -40,6 +42,7 @@ npm run test
 
 * Website: https://www.linkedin.com/in/samuel-constantino/
 * Github: [@samuel-constantino](https://github.com/samuel-constantino)
+* LinkedIn: [@samuel-constantino](https://linkedin.com/in/samuel-constantino)
 
 ## 🤝 Contributing
 
