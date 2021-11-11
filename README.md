@@ -14,7 +14,7 @@
   </a>
 </p>
 
-> Aplicação Node Js para envios automáticos de mensagens no WhatsApp
+> Node.js application for automatic sending of messages on WhatsApp
 
 ### 🏠 [Homepage](https://github.com/samuel-constantino/vovo-zap#readme)
 
@@ -32,7 +32,7 @@ npm install zap-messages-bot
 
 ## Run tests
 
-Os testes para essa aplicação ainda não foram desenvolvidos.
+Tests for this application have not yet been developed.
 
 ## Author
 
