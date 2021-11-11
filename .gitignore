@@ -1,7 +1,9 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node
+# Based on https://www.toptal.com/developers/gitignore/api/node
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
+
+# dados privados
 *.data.js
-### Node ###
+
 # Logs
 logs
 *.log
