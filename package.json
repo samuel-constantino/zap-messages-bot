@@ -1,6 +1,6 @@
 {
   "name": "zap-messages-bot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Aplicação NodeJS para envios automáticos de mensagens no WhatsApp",
   "main": "index.js",
   "scripts": {
@@ -9,14 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samuel-constantino/vovo-zap.git"
+    "url": "git+https://github.com/samuel-constantino/zap-messages-bot.git"
   },
   "keywords": [
     "bot",
     "messages",
     "whatsapp",
     "node-schedule",
-    "cron expression"
+    "cron expression",
+    "jim",
+    "pensador-api",
+    "@open-wa/wa-automate",
+    "readline-sync"
   ],
   "author": "\"Samuel Constantino <samuelicapuidados@gmail.com>",
   "license": "ISC",
