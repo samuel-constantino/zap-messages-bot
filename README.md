@@ -30,12 +30,6 @@ npx zap-messages-bot
 npm install zap-messages-bot
 ```
 
-## Run App
-
-```sh
-npm start
-```
-
 ## Run tests
 
 Os testes para essa aplicação ainda não foram desenvolvidos.
